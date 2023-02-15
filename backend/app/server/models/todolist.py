@@ -6,12 +6,12 @@ from datetime import datetime,date
 today = datetime.today()
 
 class Task(BaseModel):
-    title: str = ""
+    id:int
+    task: str = ""
     completed: bool = Field(default=False)
     changed: bool = Field(default=False)
 
 class ToDoList(Document):
-    
     regist_date: str = today.strftime("'%Y-%m-%d")
     list: List[Task] = []
     

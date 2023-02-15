@@ -15,8 +15,8 @@ async def read_all() -> ToDoList:
 
 @router.get('/id/{id}',response_description="One ToDoList")
 async def read_one(id: PydanticObjectId) -> ToDoList:
-    todolist = await ToDoList.get(id)
-    return todolist
+    todolist_info = await ToDoList.get(id)
+    return todolist_info
 
 @router.get('/date/{regist_date}',response_description="One ToDoList")
 async def read_one_by_regist_date(regist_date: str) -> ToDoList:

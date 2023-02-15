@@ -10,7 +10,7 @@ from app.server.database import init_db
 app = FastAPI(prefix="/")
 
 origins = [
-    "http://localhost:3000",
+    "http://localhost:3000"
 ]
 
 app.add_middleware(
